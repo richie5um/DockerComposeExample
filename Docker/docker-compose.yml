@@ -1,0 +1,27 @@
+version: '2'
+services:
+  proxy:
+    build: .
+    ports:
+      - "8180:8180"
+    links:
+      - test-interface
+      - test-server
+  test-interface:
+    build: ../Interface
+    expose:
+      - "80"
+    ports:
+      - "8181:80"
+    volumes:
+      - .:/code/Interface
+    links:
+      - test-server
+  test-server:
+    build: ../Server
+    expose:
+      - "3001"
+    ports:
+      - "8182:3001"
+    volumes:
+      - .:/code/Server
