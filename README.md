@@ -1,4 +1,4 @@
-# TEST - DockerCompose
+# Docker Compose Example
 
 A minimal docker compose environment consisting of:
 
@@ -6,6 +6,10 @@ A minimal docker compose environment consisting of:
 * Server (api)
 * Reverse Proxy (to route calls via _relative_ paths to www or api)
 
+## Uses
+* Proxy (Nginx - Reverse Proxy)
+* Server (Node)
+* Interface (Nginx Static Content)
 
 ## How To
 
