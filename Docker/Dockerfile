@@ -1,6 +1,6 @@
 FROM nginx
 
-COPY docker-nginx.conf /etc/nginx/conf.d/default.conf
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 COPY tools /tmp/tools
 COPY docker-startup.sh /tmp
 
